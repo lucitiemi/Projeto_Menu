@@ -11,61 +11,69 @@
     <div class="container">
 
         <header>
-            <img src="assets/home.jpg" alt="home">
-            <h2>Menu - Faça a sua escolha</h2>
+            <img src="assets/home.jpg" alt="home" class="capa">
+            <h3>Menu - Faça a sua escolha</h3>
         </header>
 
         <div class="secao" id="pratoprincipal">
             <h3>Prato Principal</h3>
             <p>Todos os pratos acompanham arroz, feijão e a sobremesa do dia.</p>
-            <div class="card">
-                <img src="assets/bife.jpg" alt="bife">
-                <p>Bife com batata</p>
-                <p class="preco">R$ 30,00</p>
-                <p>inserir quantidade</p>
-            </div>
-            <div class="card">
-                <img src="assets/coxa.jpg" alt="coxa">
-                <p>Coxa de frango crocante</p>
-                <p class="preco">R$ 25,00</p>
-                <p>inserir quantidade</p>
-            </div>
-            <div class="card">
-                <img src="assets/panela.jpg" alt="carne">
-                <p>Carne de panela</p>
-                <p class="preco">R$ 22,00</p>
-                <p>inserir quantidade</p>
-            </div>
+            <div class="cards">
+                <div class="card">
+                    <img src="assets/bife.jpg" alt="bife">
+                    <p class="descricao">Bife com batata</p>
+                    <p class="preco">R$ 30,00</p>
+                    <p>inserir quantidade</p>
+                </div>
+                <div class="card">
+                    <img src="assets/coxa.jpg" alt="coxa">
+                    <p class="descricao">Coxa de frango crocante</p>
+                    <p class="preco">R$ 25,00</p>
+                    <p>inserir quantidade</p>
+                </div>
+                <div class="card">
+                    <img src="assets/panela.jpg" alt="carne">
+                    <p class="descricao">Carne de panela</p>
+                    <p class="preco">R$ 22,00</p>
+                    <p>inserir quantidade</p>
+                </div>
+            </div>           
         </div>
 
         <div class="secao" id="acompanhamento">
             <h3>Acompanhamentos</h3>
-            <p>Porções para uma pessoa</p>
-            <div class="card">
-                <img src="assets/farofa.jpg" alt="farofa">
-                <p>Farofa</p>
-                <p class="preco">R$ 10,00</p>
-                <p>inserir quantidade</p>
+            <p>Porções para uma pessoa.</p>
+            <div class="cards">
+                <div class="card">
+                    <img src="assets/farofa.jpg" alt="farofa">
+                    <p class="descricao">Farofa</p>
+                    <p class="preco">R$ 10,00</p>
+                    <p>inserir quantidade</p>
+                </div>
+                <div class="card">
+                    <img src="assets/salad.jpg" alt="salada">
+                    <p class="descricao">Salada</p>
+                    <p class="preco">R$ 8,00</p>
+                    <p>inserir quantidade</p>
+                </div>
+                <div class="card">
+                    <img src="assets/torresmo.jpg" alt="torresmo">
+                    <p class="descricao">Torresmo</p>
+                    <p class="preco">R$ 22,00</p>
+                    <p>inserir quantidade</p>
+                </div>
             </div>
-            <div class="card">
-                <img src="assets/salad.jpg" alt="salada">
-                <p>Salada</p>
-                <p class="preco">R$ 8,00</p>
-                <p>inserir quantidade</p>
-            </div>
-            <div class="card">
-                <img src="assets/torresmo.jpg" alt="torresmo">
-                <p>Torresmo</p>
-                <p class="preco">R$ 22,00</p>
-                <p>inserir quantidade</p>
-            </div>
+            
         </div>
 
         <div class="secao" id="dadospessoais">
             <h3>Dados Pessoais</h3>
-            <input type="text" placeholder="Digite seu nome"/>
-            <input type="phone" placeholder="Digite o seu telefone"/>
-            <input type="email" placeholder="Digite seu e-mail"/>
+            <div class="formulario">
+                <input type="text" placeholder="Digite seu nome"/>
+                <input type="phone" placeholder="Digite o seu telefone"/>
+                <input type="email" placeholder="Digite seu e-mail"/>
+            </div>
+            
         </div>
 
         <button>Calcular</button>

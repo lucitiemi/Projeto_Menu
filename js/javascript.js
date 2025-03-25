@@ -1,3 +1,6 @@
+$("#telefone").mask("(99) 9999-99999");
+
+
 var prods = [
     { id: 1, name: "Bife com batata", price: 30.0 },
     { id: 2, name: "Coxa de frango crocante", price: 25.0 },

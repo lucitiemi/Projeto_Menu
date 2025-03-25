@@ -14,6 +14,10 @@ function calc(){
     var quantities = document.getElementsByName("quantity");
     var output     = document.getElementById("output");
     var total      = 0;
+    var nome = document.getElementById("nome");
+    var telefone = document.getElementById("telefone");
+    var email = document.getElementById("email");
+
     
     output.innerHTML = "";
 
@@ -23,6 +27,10 @@ function calc(){
         output.innerHTML += `Produto: ${prods[id-1].name}  - Preço: ${prods[id-1].price} - Quantidade: ${input.value} </br>`;
         total            += prods[id-1].price * parseFloat(input.value);
     }
+
+    output.innerHTML += `Nome: ${nome.value}\n`;
+    output.innerHTML += `Telefone: ${telefone.value}\n`;
+    output.innerHTML += `E-mail: ${email.value}\n`;
 
     output.innerHTML += `<h2>Total: ${total}</h2>`;
 

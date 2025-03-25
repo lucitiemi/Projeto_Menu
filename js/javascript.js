@@ -17,22 +17,27 @@ function calc(){
     var nome = document.getElementById("nome");
     var telefone = document.getElementById("telefone");
     var email = document.getElementById("email");
+    var formatter = new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    })
 
     
-    output.innerHTML = "";
+    output.innerHTML = `<p>Caro <b>${nome.value}</b></p><br><br>`;
+
+    output.innerHTML += `<p>Seguem os dados do seu pedido.</p><br>`;
+    output.innerHTML += `<p>O seu pedido é:</p><br>`;
 
     for (var input of quantities) {
         var id = input.id;
 
-        output.innerHTML += `Produto: ${prods[id-1].name}  - Preço: ${prods[id-1].price} - Quantidade: ${input.value} </br>`;
-        total            += prods[id-1].price * parseFloat(input.value);
+        if(parseFloat(input.value)){
+            output.innerHTML += `<li>Prato: ${prods[id-1].name}  - Preço unitário: ${formatter.format(prods[id-1].price)} - Quantidade: ${input.value} - Total:  ${formatter.format(parseFloat(input.value)*parseFloat(prods[id-1].price))} </li>`;
+            total            += prods[id-1].price * parseFloat(input.value);
+        }
     }
 
-    output.innerHTML += `Nome: ${nome.value}\n`;
-    output.innerHTML += `Telefone: ${telefone.value}\n`;
-    output.innerHTML += `E-mail: ${email.value}\n`;
-
-    output.innerHTML += `<h2>Total: ${total}</h2>`;
+    output.innerHTML += `<h3>Preço final: ${formatter.format(total)}</h3>`;
 
 }
 

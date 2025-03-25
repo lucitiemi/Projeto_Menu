@@ -73,6 +73,7 @@ p {
 .preco {
     font-weight: 700;
     color: rgb(8, 125, 8);
+    margin-bottom: 5px;
 }
 
 input {

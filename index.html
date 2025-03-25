@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Menu</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quantity.css">
 </head>
 <body>
 
@@ -23,19 +24,34 @@
                     <img src="assets/bife.jpg" alt="bife">
                     <p class="descricao">Bife com batata</p>
                     <p class="preco">R$ 30,00</p>
-                    <p>inserir quantidade</p>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus">
+                        <input type="number" step="1" min="0" max="" id="1" name="quantity" value="0" title="Qty"
+                            class="input-text qty text" size="4" pattern="" inputmode="">
+                        <input type="button" value="+" class="plus">
+                    </div>
                 </div>
                 <div class="card">
                     <img src="assets/coxa.jpg" alt="coxa">
                     <p class="descricao">Coxa de frango crocante</p>
                     <p class="preco">R$ 25,00</p>
-                    <p>inserir quantidade</p>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus">
+                        <input type="number" step="1" min="0" max="" id="2" name="quantity" value="0" title="Qty"
+                            class="input-text qty text" size="4" pattern="" inputmode="">
+                        <input type="button" value="+" class="plus">
+                    </div>
                 </div>
                 <div class="card">
                     <img src="assets/panela.jpg" alt="carne">
                     <p class="descricao">Carne de panela</p>
                     <p class="preco">R$ 22,00</p>
-                    <p>inserir quantidade</p>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus">
+                        <input type="number" step="1" min="0" max="" id="3" name="quantity" value="0" title="Qty"
+                            class="input-text qty text" size="4" pattern="" inputmode="">
+                        <input type="button" value="+" class="plus">
+                    </div>
                 </div>
             </div>           
         </div>
@@ -48,19 +64,34 @@
                     <img src="assets/farofa.jpg" alt="farofa">
                     <p class="descricao">Farofa</p>
                     <p class="preco">R$ 10,00</p>
-                    <p>inserir quantidade</p>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus">
+                        <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
+                            class="input-text qty text" size="4" pattern="" inputmode="">
+                        <input type="button" value="+" class="plus">
+                    </div>
                 </div>
                 <div class="card">
                     <img src="assets/salad.jpg" alt="salada">
                     <p class="descricao">Salada</p>
                     <p class="preco">R$ 8,00</p>
-                    <p>inserir quantidade</p>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus">
+                        <input type="number" step="1" min="0" max="" id="5" name="quantity" value="0" title="Qty"
+                            class="input-text qty text" size="4" pattern="" inputmode="">
+                        <input type="button" value="+" class="plus">
+                    </div>
                 </div>
                 <div class="card">
                     <img src="assets/torresmo.jpg" alt="torresmo">
                     <p class="descricao">Torresmo</p>
-                    <p class="preco">R$ 22,00</p>
-                    <p>inserir quantidade</p>
+                    <p class="preco">R$ 12,00</p>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus">
+                        <input type="number" step="1" min="0" max="" id="6" name="quantity" value="0" title="Qty"
+                            class="input-text qty text" size="4" pattern="" inputmode="">
+                        <input type="button" value="+" class="plus">
+                    </div>
                 </div>
             </div>
             
@@ -76,9 +107,14 @@
             
         </div>
 
-        <button>Calcular</button>
+        <button onclick="calc()">Calcular</button>
+
+        <div id="output"></div>
 
     </div>
     
+    <script src="js/jquery-3.6.0.min.js"> </script>
+    <script src="js/quantity.js"> </script>
+    <script src="js/javascript.js"> </script>
 </body>
 </html>
